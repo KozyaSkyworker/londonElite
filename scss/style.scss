@@ -1,0 +1,261 @@
+@import 'reset';
+@import 'vars';
+@import 'global';
+
+/* ============================================== Стили ============================================== */
+.header{
+    
+    &__photos{
+        position: absolute;
+        right: 0;
+        bottom: -49px;
+    }
+    &__small-photos{
+        display: flex;
+        margin-top: 30px;
+    }
+    &__small-photos a{
+        position: relative;
+    }
+    &__small-photos a span{
+        position: absolute;
+        text-align: center;
+        bottom: 33px;
+        left: 0;
+        right: 0;
+        color: #fff;
+        line-height: 20px;
+    }
+    &__small-photos a + a{
+        margin-left: 31px;
+    }
+    &__title{
+        max-width: 527px;
+        margin-bottom: 60px;
+    }
+    &__info{
+        position: relative;
+        background-color: #F4F5F5;
+    }
+    &__info-inner{
+        display: flex;
+        padding: 70px 0 74px 0;
+        margin-bottom: 41px;
+    }
+    &__text{
+        margin-left: 60px;
+        max-width: 319px;
+    }
+}
+.list{
+    list-style: none;
+    & li + li{
+        margin-top: 30px;
+    }
+    &__term{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    &__descr{
+        margin-top: 6px;
+        color: #777;
+        font-size: 14px;
+        line-height: 26px;
+    }
+    &__small{
+        color: red;
+    }
+}
+
+.main{
+    &__inner{
+        display: flex;
+    }
+    &__tabs{
+        margin-top: 40px;
+    }
+    &__map{
+        position: relative;
+        background-color: #ccc;
+        background-image: url('./../img/map.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        flex-basis: 930px;
+        height: 450px;
+        margin-left: 89px;
+    }
+    
+}
+
+.pointer{
+    position: absolute;
+
+    &__outside{
+        background-color: rgba($color: #7A1B1B, $alpha: .3);
+        width: 46px;
+        height: 46px;
+        position: relative;
+    }
+    &__inside{
+        background-color: #C79791;
+        width: 36px;
+        height: 36px;
+    }
+    &__outside,
+    &__inside{
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__down{
+        position: absolute;
+        bottom: -2px;
+        z-index: 1;
+    }
+    &_hide{
+        opacity: .2;
+    }
+}
+#cart-1{
+    top: 149px;
+    left: 138px;
+}
+#cart-2{
+    top: 108px;
+    left: 358px;
+}
+#cart-3{
+    top: 60px;
+    right: 419px;
+}
+#cart-4{
+    bottom: 101px;
+    right: 169px;
+}
+#coffee-1{
+    top: 91px;
+    left: 185px;
+}
+#coffee-2{
+    top: 166px;
+    right: 286px;
+}
+#coffee-3{
+    bottom: 56px;
+    right: 259px;
+}
+#health-1{
+    top: 146px;
+    right: 433px;
+}
+#health-2{
+    bottom: 28px;
+    right: 377px;
+}
+#education-1{
+    bottom: 179px;
+    left: 128px;
+}
+#education-2{
+    bottom: 132px;
+    right: 66px;
+}
+#cinema-1{
+    top: 201px;
+    left: 216px;
+}
+#beauty-1{
+    bottom: 143px;
+    left: 273px;
+}
+#child-1{
+    top: 185px;
+    right: 377px;
+}
+#child-2{
+    top: 87px;
+    right: 352px;
+}
+#child-3{
+    top: 58px;
+    right: 220px;
+}
+#zoo-1{
+    top: 176px;
+    left: 403px;
+}
+
+.tab{   
+    cursor: pointer;
+    & + &{
+        margin-top: 16px;
+    }
+    border: 1px solid #C79791;
+    border-radius: 20px;
+    width: max-content;
+    padding: 9px 16px 9px 20px;
+    &__content{
+        text-transform: uppercase;
+        line-height: 26px;
+        font-size: 11px;
+    }
+    &__count{
+        color: #7A1B1B;
+        margin-left: 7px;
+        
+        font-weight: bold;
+    }
+    &_active{
+        background-color: #ce4c4c;
+        color: #000;
+    }
+}
+
+/* .footer{
+    
+} */
+.slider{
+    &{
+        position: relative;
+    }
+    &__count{
+        font-family: 'Baron Neue';
+        font-weight: bold;
+        font-size: 100px;
+        line-height:normal;
+        color: rgba($color: #7A1B1B, $alpha: .1);
+    }
+    &__text{
+        margin: 16px 0 25px;
+    }
+    &__link{
+        font-weight: bold;
+        color: #7A1B1B;
+    }
+    &__next img{
+        transform: rotateZ(180deg);
+    }
+}
+
+.header__inner,
+.main__inner,
+.footer__inner{
+    padding: 80px 0;
+}
+
+@media (max-width: 1210px) {
+    .header__photos{
+        position:static;
+        transform: translateY(58px);
+        width: max-content;
+        margin: 0 auto;
+    }
+    .header__small-photos a + a{
+        margin-left: 30px;
+    }
+    .header__info-inner{
+        margin-bottom: 0;
+    }
+}
