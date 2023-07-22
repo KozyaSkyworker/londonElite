@@ -93,6 +93,7 @@
 .main{
     &{
         padding: 80px 0;
+        
     }
     &__inner{
         display: flex;
@@ -534,6 +535,7 @@
         padding: 40px 0;
     }
     .main{
+        overflow-x: hidden;
         padding-bottom: 0;
     }
     .main__tabs{
